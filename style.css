@@ -622,7 +622,7 @@ body {
 /* Mobile Adjustments */
 @media (max-width: 600px) {
     .container {
-        padding: 15px;
+        padding: 60px 15px 15px 15px;
     }
 
     .question-card {
@@ -634,7 +634,7 @@ body {
     }
 
     .result-card {
-        padding: 20px;
+        padding: 20px 20px 40px 20px;
     }
 
     .result-title {
@@ -819,3 +819,16 @@ body {
   color: var(--text-muted);
   margin-top: 10px;
 }
+/* ========== 截圖專用排版 (一頁式) ========== */
+.capture-mode { width: 850px !important; max-width: 850px !important; padding: 0 !important; background: #0a0a14; }
+.capture-mode .result-card { display: grid !important; grid-template-columns: 350px 1fr !important; grid-template-rows: auto 1fr auto !important; gap: 20px 30px !important; padding: 30px !important; margin: 0 !important; border-radius: 0 !important; border: none !important; box-shadow: none !important; }
+.capture-mode .corner { display: none !important; }
+.capture-mode .result-header { grid-column: 1 !important; grid-row: 1 !important; margin-bottom: 0 !important; }
+.capture-mode .result-hero { grid-column: 1 !important; grid-row: 2 !important; margin-bottom: 0 !important; max-height: 400px !important; height: 100% !important; display: flex !important; }
+.capture-mode .result-hero img { object-fit: contain !important; border-radius: 12px !important; }
+.capture-mode .result-scores { grid-column: 1 !important; grid-row: 3 !important; margin-bottom: 0 !important; }
+.capture-mode .result-body { grid-column: 2 !important; grid-row: 1 / span 3 !important; display: flex !important; flex-direction: column !important; gap: 15px !important; }
+.capture-mode .radar-box { padding: 10px !important; flex: 1 !important; min-height: 250px !important; }
+.capture-mode .radar-box canvas { max-height: 250px !important; margin: 0 auto; display: block; }
+.capture-mode .res-desc { font-size: 0.95rem !important; line-height: 1.5 !important; }
+.capture-mode .box-title { font-size: 1rem !important; margin-bottom: 10px !important; }

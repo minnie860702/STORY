@@ -455,7 +455,12 @@ async function captureResultCard() {
     return html2canvas(area, {
         backgroundColor: '#0f172a',
         scale: 2,
-        useCORS: true
+        useCORS: true,
+        windowWidth: 850,
+        onclone: (clonedDoc) => {
+            const clonedArea = clonedDoc.getElementById('result-capture-area');
+            if (clonedArea) clonedArea.classList.add('capture-mode');
+        }
     });
 }
 
