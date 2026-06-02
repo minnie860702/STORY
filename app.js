@@ -527,7 +527,7 @@ window.onload = () => {
     const startDate = new Date('2026-06-01T00:00:00Z').getTime();
     const now = Date.now();
     // Base count + 1 new person every ~6 minutes (approx 240 per day)
-    const baseCount = 8520;
+    const baseCount = 328;
     const addedCount = Math.floor(Math.max(0, now - startDate) / (1000 * 60 * 6));
     document.getElementById('view-count').textContent = (baseCount + addedCount).toLocaleString();
 };
